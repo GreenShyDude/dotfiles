@@ -1,5 +1,6 @@
-# Installation of Plugins and Adding new ones:
+# Warinng the Neovim Version must be v0.10.2 or higher
 
+# Installation of Plugins and Adding new ones:
 - 1: Open with nvim the "file /lua/core/plugins.lua"
 - 2: Run Command ":source %"
 - 3: Run Command ":PackerSync"

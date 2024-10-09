@@ -1,6 +1,6 @@
 # Requiements:
-- Neovim Version v0.10.2 or higher
-- Rustup
+- Neovim (Version v0.10.2 or higher)
+- Rustup (Component rust-src)
 - Tree-sitter
 
 # Installation of Plugins and Adding new ones:

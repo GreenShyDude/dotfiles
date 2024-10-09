@@ -1,4 +1,7 @@
-# Warinng the Neovim Version must be v0.10.2 or higher
+# Requiements:
+## - Neovim Version v0.10.2 or higher
+## - Rustup
+## - Tree-sitter
 
 # Installation of Plugins and Adding new ones:
 - 1: Open with nvim the "file /lua/core/plugins.lua"

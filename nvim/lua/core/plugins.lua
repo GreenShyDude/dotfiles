@@ -28,6 +28,9 @@ return require('packer').startup(function(use)
     requires = { {'nvim-lua/plenary.nvim'}}
 
   }
+  use {"akinsho/toggleterm.nvim", tag = '*', config = function()
+  require("toggleterm").setup()
+end}
   -- My plugins here
   -- use 'foo1/bar1.nvim'
   -- use 'foo2/bar2.nvim'

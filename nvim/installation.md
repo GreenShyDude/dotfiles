@@ -2,12 +2,13 @@
 - Neovim (Version v0.10.2 or higher)
 - Rustup (Component rust-src)
 - Tree-sitter
+- npm
 
 # Installation of Plugins and Adding new ones:
 - 1: Open with nvim the "file /lua/core/plugins.lua"
 - 2: Run Command ":source %"
 - 3: Run Command ":PackerSync"
-- 4: Run Command ":MasonInsstall RustAnalyzer Codelldb"
+- 4: Run Command ":MasonInsstall --force RustAnalyzer Codelldb ts_ls lua_ls solargraph"
 ## Installation & Unistallation with Packer:
 Add/Remove in the file "/lua/core/plugins.lua" the line "use "<pluginGithubName"" and then run the the command of step 2 n 3
 

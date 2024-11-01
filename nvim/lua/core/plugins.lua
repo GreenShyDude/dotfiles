@@ -17,8 +17,14 @@ return require('packer').startup(function(use)
   use 'nvim-tree/nvim-web-devicons'
   use 'nvim-lualine/lualine.nvim'
   use 'sainnhe/sonokai'
-  use 'williamboman/mason.nvim'    
+  use 'williamboman/mason.nvim'
   use 'williamboman/mason-lspconfig.nvim'
+  use 'hrsh7th/nvim-cmp'
+  use 'hrsh7th/cmp-nvim-lsp'
+  use 'L3MON4D3/LuaSnip'
+  use 'saadparwaiz1/cmp_luasnip'
+  use 'rafamadriz/friendly-snippets'
+
   use 'neovim/nvim-lspconfig'
   use 'mrcjkb/rustaceanvim'
   use 'nvim-treesitter/nvim-treesitter'
@@ -28,9 +34,26 @@ return require('packer').startup(function(use)
     requires = { {'nvim-lua/plenary.nvim'}}
 
   }
-  use {"akinsho/toggleterm.nvim", tag = '*', config = function()
-  require("toggleterm").setup()
-end}
+  use {
+    "akinsho/toggleterm.nvim", tag = '*', config = function()
+    require("toggleterm").setup()
+    end
+  }
+  
+  use {
+    'goolord/alpha-nvim',
+    config = function ()
+        require'alpha'.setup(require'alpha.themes.dashboard'.config)
+    end
+  }
+
+  -- use {
+  --  "startup-nvim/startup.nvim",
+  --  requires = {"nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim", "nvim-telescope/telescope-file-browser.nvim"},
+  --  config = function()
+  --    require"startup".setup()
+  --  end
+  -- }
   -- My plugins here
   -- use 'foo1/bar1.nvim'
   -- use 'foo2/bar2.nvim'

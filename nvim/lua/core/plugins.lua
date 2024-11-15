@@ -24,7 +24,7 @@ return require('packer').startup(function(use)
   use 'L3MON4D3/LuaSnip'
   use 'saadparwaiz1/cmp_luasnip'
   use 'rafamadriz/friendly-snippets'
-
+  use 'nvim-tree/nvim-web-devicons'
   use 'neovim/nvim-lspconfig'
   use 'mrcjkb/rustaceanvim'
   use 'nvim-treesitter/nvim-treesitter'
@@ -42,9 +42,34 @@ return require('packer').startup(function(use)
   
   use {
     'goolord/alpha-nvim',
-    config = function ()
-        require'alpha'.setup(require'alpha.themes.dashboard'.config)
-    end
+     dependencies = {
+    "nvim-tree/nvim-web-devicons",
+  },
+
+  config = function()
+    local alpha = require("alpha")
+    local dashboard = require("alpha.themes.startify")
+
+    dashboard.section.header.val = {
+      [[                                                                       ]],
+      [[                                                                       ]],
+      [[                                                                       ]],
+      [[                                                                       ]],
+      [[                                                                     ]],
+      [[       ████ ██████           █████      ██                     ]],
+      [[      ███████████             █████                             ]],
+      [[      █████████ ███████████████████ ███   ███████████   ]],
+      [[     █████████  ███    █████████████ █████ ██████████████   ]],
+      [[    █████████ ██████████ █████████ █████ █████ ████ █████   ]],
+      [[  ███████████ ███    ███ █████████ █████ █████ ████ █████  ]],
+      [[ ██████  █████████████████████ ████ █████ █████ ████ ██████ ]],
+      [[                                                                       ]],
+      [[                                                                       ]],
+      [[                                                                       ]],
+    }
+
+    alpha.setup(dashboard.opts)
+  end,
   }
 
   -- use {

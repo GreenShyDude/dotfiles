@@ -1,4 +1,4 @@
-require("core.keymaps")
-require("core.plugins")
-require("core.plugin_config.init")
+require("config.lazy")
+require("config.lsp")
 
+vim.cmd[[colorscheme tokyonight-night]]

@@ -1,4 +1,9 @@
 require("config.lazy")
 require("config.lsp")
 
-vim.cmd[[colorscheme tokyonight-night]]
+vim.cmd[[colorscheme catppuccin-frappe]]
+
+local builtin = require('telescope.builtin')
+vim.keymap.set('n', '<Space>ff', builtin.find_files, { desc = 'Telescope find files' })
+vim.keymap.set('n', '<Space>fb', builtin.buffers, { desc = 'Telescope buffers' })
+vim.keymap.set('n', '<Space>fh', builtin.help_tags, { desc = 'Telescope help tags' })
